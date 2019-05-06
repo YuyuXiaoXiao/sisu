@@ -121,12 +121,18 @@ def popular_cases(request):
       count = count + 1;
   
   #print(casesparsed)
-  
   random_cases = []
   limit = len(Post.objects.all())
-  random_numbers = random.sample(range(1, limit), 3)
-  random_cases = Post.objects.filter(pk__in=random_numbers)
-    
+  if limit > 2:
+    random_numbers = random.sample(range(1, limit), 3)
+  elif limit > 1:
+    random_numbers = [1, 2]
+  elif limit > 0:
+    random_numbers = [1]
+  else:
+    random_numbers = []
+  random_cases = Post.objects.filter(pk__in=random_numbers)  
+  
   return {'pop_cases' : pop_posts, 
           'cases':casesparsed, 
           'random_cases': random_cases,
@@ -194,6 +200,12 @@ def about_sisu(request):
     
 def about_us(request):
     return render(request, 'blog/about_us.html')
+
+def terms_conditions(request):
+    return render(request, 'blog/terms_condition.html')
+    
+def privacy_policy(request):
+    return render(request, 'blog/privacy_policy.html')
 
 def story(request, category_name):
     # print(pretty_request(request))
@@ -364,9 +376,14 @@ def add_reply_to_comment(request):
         
         replyToComment.save()
            
+        data = {
+            'success': True,
+            'newReply': replyToComment.created_date
+        }
     else:
         form = CommentForm()
-    return render(request, 'blog/story_entry.html', {'post':replypost})
+    return JsonResponse(data)
+    #return render(request, 'blog/story_entry.html', {'post':replypost})
     
 @login_required
 def comment_approve(request, pk):
