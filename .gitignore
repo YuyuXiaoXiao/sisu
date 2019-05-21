@@ -1,9 +1,10 @@
 *.pyc
 *~
+*.sqlite3
 __pycache__
 myvenv
-*.sqlite3
-*.json
+db.sqlite3
+db.json
 /static
 .DS_Store
-.env
+.vscode/
