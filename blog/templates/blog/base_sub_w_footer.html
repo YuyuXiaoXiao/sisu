@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav">
         <li class="nav-item dropdown nav-dropdown">
           <a class="nav-link">
-            Stories
+            Stories <i class="fa fa-angle-down"></i>
           </a>
           <div class="dropdown-menu">
             {% for name, member in categories %}
@@ -26,15 +26,15 @@
         </li>
         <li class="nav-item dropdown nav-dropdown">
           <a class="nav-link">
-              About
+              About <i class="fa fa-angle-down"></i>
           </a>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'about_us' %}">SISU Overview</a>
+              <a class="dropdown-item" href="{% url 'about_us' %}">Overview</a>
               <a class="dropdown-item" href="{% url 'about_team' %}">Meet the Team</a>
-              <a class="dropdown-item" href="{% url 'about_program' %}">Empower Now Program</a>
+              <a class="dropdown-item" href="{% url 'about_program' %}">Empower Now</a>
           </div>  
         </li> 
-        <li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contribute to SISU</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact</a></li>
       </ul>             
     </div>
     <!--================ Search =================-->
