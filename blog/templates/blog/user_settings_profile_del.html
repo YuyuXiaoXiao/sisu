@@ -14,11 +14,8 @@
         </div>
         <div class="left-text contact-us-right-panel contact-us-text-panel">
             <h1>
-                  We are sorry to see you go!
-            </h1>
-            <p>
                   Are your sure to delete your Sisu account?
-            </p>
+            </h1>
             <br>
             
             {% if user.is_authenticated  %}
@@ -26,10 +23,10 @@
                 <button type="submit" class="sisu-button">
                     <a href="{% url 'user_details' pk=user.id %}">GO BACK</a>
                 </button>
-                <hr class="hr-text" data-content="Stay..." />
+                <hr class="hr-text" data-content="We are sorry to see you go" />
                 <form method="post">
                     {% csrf_token %}
-                    <button class="sisu-button">Confirm delete "{{ object }}"</button>
+                    <button class="sisu-button">Delete "{{ object }}" account</button>
                 </form>
                 
             
