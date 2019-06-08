@@ -87,10 +87,16 @@
 
 #signup-button {
     border-radius: 10px;
-    padding: 5px 15px;
     color: #D28D00;
     background-color: white;
-    margin-right: 10px;
+    padding: 10px 15px;
+    line-height: 20px;
+}
+
+#seachForm {
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size:12px;
 }
 
 .story-carousel a {
