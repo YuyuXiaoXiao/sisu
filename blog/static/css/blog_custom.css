@@ -1176,9 +1176,11 @@ nav ul li ul li a {
   #signup-button {
     padding: 12px 10px;
     margin-left: 40px;
+    margin-bottom: 5px;
   }
   
   #main_search_input {
+    margin-top:10px;
     margin-left: 28px;
     margin-right: 10px;
     width:90%;
@@ -1187,11 +1189,27 @@ nav ul li ul li a {
   .nav-dropdown {
     position: static;
   }
-      #placeholder {
+  
+  #placeholder {
       margin: -30px;
+  }
+  
+  #separater_li{
+      display:none;
+  }
+
+  #profile_img {
+      display:none;
+  }
+  
+  #account_detail{
+      margin-left: 45px;
+      margin-top: 50px;
+      margin-bottom: 35px;
   }
 
 }
+
 @media screen and (min-width: 799px) {
   .nav-list {
     display: block !important;
