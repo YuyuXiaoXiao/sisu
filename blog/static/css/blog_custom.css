@@ -1172,7 +1172,18 @@ nav ul li ul li a {
   nav ul li ul li a {
     padding-left: 85px;
   }
-
+  
+  #signup-button {
+    padding: 12px 10px;
+    margin-left: 40px;
+  }
+  
+  #main_search_input {
+    margin-left: 28px;
+    margin-right: 10px;
+    width:90%;
+  }
+  
   .nav-dropdown {
     position: static;
   }
