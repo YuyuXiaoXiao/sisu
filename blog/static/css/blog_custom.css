@@ -287,6 +287,7 @@ label {
   right: 10px;
   text-align: left;
   vertical-align: middle !important;
+  
 }
 
 /*
@@ -1056,3 +1057,204 @@ label {
     text-align: left;
   }
 }
+
+/* **************** Nav Bar **************** */
+.navigation {
+  height: 50px;
+  background: white;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 5px;
+  float: left;
+}
+
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo_h {
+    transform: scale(0.35);
+    top: -42.5px;
+    left: -70px;
+}
+
+.picture {
+    position: absolute;
+    padding-right: 5px;
+    float: right;
+}
+
+.nav-container {
+   max-width: 1465px;
+   margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 50px;
+  background: white;
+  color: #9d9d9d;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  color: #5D1049;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 100;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #5D1049;
+  height: 50px;
+  width: 70px;
+  background: white;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 10px 50px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 85px;
+  }
+  
+  #signup-button {
+    padding: 12px 10px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+  }
+  
+  #main_search_input {
+    margin-top:10px;
+    margin-left: 28px;
+    margin-right: 10px;
+    width:90%;
+  }
+  
+  .nav-dropdown {
+    position: static;
+  }
+  
+  #placeholder {
+      margin: -30px;
+  }
+  
+  #separater_li{
+      display:none;
+  }
+
+  #profile_img {
+      display:none;
+  }
+  
+  #account_detail{
+      margin-left: 45px;
+      margin-top: 50px;
+      margin-bottom: 35px;
+  }
+
+}
+
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+  
+    #placeholder {
+      margin: -5px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #5D1049;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+

@@ -15,13 +15,13 @@ https://codepen.io/khadkamhn/pen/ZGvPLo -->
 					</h3>
 				</div>
 				<div class="group">
-                    <a href="{% provider_login_url 'google' %}" class = "btn btn-block btn-md btn-social btn-google">
+                    <a href="{% provider_login_url 'google' %}" class = "btn btn-block btn-md btn-social btn-google" style="padding-left: 30%">
                         <span class = "fa fa-google"></span>
                         Login with Google 
                     </a>
 				</div>
 				<div class="group">
-	            <a href="{% provider_login_url 'linkedin_oauth2' %}" class = "btn btn-block btn-md btn-social btn-linkedin">
+	            <a href="{% provider_login_url 'linkedin_oauth2' %}" class = "btn btn-block btn-md btn-social btn-linkedin" style="padding-left: 30%">
                         <span class = "fa fa-linkedin"></span>
                         Login with LinkedIn 
                     </a>
@@ -41,8 +41,8 @@ https://codepen.io/khadkamhn/pen/ZGvPLo -->
 					</div>
 					<div class="group">
 						<input id="check" type="checkbox" class="check" checked onchange="document.getElementById('sign-in-button').disabled = !this.checked;">
-						<label for="check" class="loginCheck" style="line-height:1em;font-weight:lighter;"><span class="icon"></span> I agree to SISU's <a href="{% url 't_c' %}"><u>Terms & Conditions</u></a> &nbsp and &nbsp  
-                        <a href="{% url 'p_p' %}"><u>Privacy Policy</u></a>
+						<label for="check" class="loginCheck" style="line-height:1em;font-weight:lighter;"><span class="icon"></span> I agree to SISU's <a href="{% url 't_c' %}"><u style="color:#7D1E62">Terms & Conditions</u></a> and  
+                        <a href="{% url 'p_p' %}"><u style="color:#7D1E62">Privacy Policy</u></a>
                         </label>
 					</div>
 					<div class="group">
@@ -51,8 +51,8 @@ https://codepen.io/khadkamhn/pen/ZGvPLo -->
 					<input type="hidden" name="next" value="{{ request.path }}" />
 				</form>
 				<div class="foot-lnk-login">
-						Don't have an account?  <label data-toggle="modal" data-target="#signupModal" data-dismiss="modal" style="cursor: pointer;">Sign up</label>
-                        <br>Forget Password? <a href="{% url 'password_reset' %}">Reset</a>  
+						Don't have an account?  <label data-toggle="modal" data-target="#signupModal" data-dismiss="modal" style="cursor: pointer;"><u>Sign up</u></label>
+                        <br>Forget Password? <a href="{% url 'password_reset' %}"><u>Reset</u></a>  
 				</div>
 			</div>
 		</div>
