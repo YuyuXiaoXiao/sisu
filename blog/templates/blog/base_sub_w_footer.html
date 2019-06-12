@@ -57,7 +57,7 @@
         <li id="account_detail">
             {{ userprofile.management_form }}
             {% for form in userprofile.forms %}
-            <a href="#!" style="margin-top:-35px;margin-bottom:-30px;padding:0;"><img id="profile_img" src="{% static '/img/icon/' %}{{ form.instance.photo }}.png" style="transform: scale(0.35);">Hi, {{ request.user }}!</a>
+            <a href="#!" style="padding:0 5px;"><img id="profile_img" src="{% static '/img/icon/' %}{{ form.instance.photo }}.png" style="height:80%;margin-right:10px;">Hi, {{ request.user }}!</a>
             {% endfor %}
             
             <ul class="nav-dropdown">
