@@ -89,8 +89,8 @@ html {
     border-radius: 10px;
     color: #D28D00;
     background-color: white;
-    padding: 12px 10px;
-    line-height: 20px;
+    padding: 14px 10px;
+    line-height: 22px;
 }
 
 #signup-button:hover {
@@ -117,7 +117,7 @@ html {
 }
 
 .story-carousel-item {
-    height: 800px;
+    height: 100%;
 }
 
 .story-carousel-item  p{
@@ -151,23 +151,23 @@ html {
 
 .story-carousel-caption p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 .story-carousel-caption > h3 {
     color: #f8af1b;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .story-carousel-caption > h1 {
     color: white;
-    font-size: 110px;
+    font-size: 6rem;
 }
 
 .about-info {
     text-align: center;
-    padding: 30px;
-    min-height: 300px;
+    padding-top: 10px;
+    min-height: 200px;
     margin: 0 auto;
 }
 .left-text {
@@ -325,10 +325,19 @@ html {
 .sisu-header-container {
     position: relative;
     height: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 950px;
+    margin: 6px auto;
     text-align: left;
 }
+
+.sisu-header-container-center {
+    position: relative;
+    height: 100%;
+    max-width: 950px;
+    margin: 6px auto;
+    text-align: center;
+}
+
 .sisu-header-text {
     position: relative;
     text-align: inherit;
@@ -340,6 +349,7 @@ html {
     padding: 0 50px;
     line-height:1.5em;
 }
+
 .sisu-header-text h1 {
     font-size: 45px;
 }
@@ -489,8 +499,8 @@ html {
 }
 .story-entry-right {
     margin-top: 50px;
-    margin-right: -50px;
-    width: 170px;
+    margin-right: -100px;
+    width: 250px;
     position: absolute;
     top: 0;
     right: 0;
@@ -509,6 +519,7 @@ html {
 
 .story-entry-right-content h4 {
     font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .story-entry-comment h5 {
