@@ -30,6 +30,9 @@
         <li>
           <a href="#!">Stories</a>
           <ul class="nav-dropdown">
+            <li>
+              <a href="{% url 'get_all_category' %}">All Categories</a>
+            </li>
             {% for name, member in categories %}
             <li>
               <a href="{% url 'story' category_name=member.value %}">{{ member.label }}</a>

@@ -22,8 +22,8 @@
 </div>
 {% else %}
 <div class="story-content">
-    <h3>You have 0 pending comment. Leave another comment here! </h3>  
-   
-    {% include 'blog/story_popular.html' %}
+    <h3>You have 0 pending comment.</h3> 
+    <h3>Leave another comment <a href="{% url 'get_all_category' %}"><u>here</u></a>! </h3>  
+
 </div> 
 {% endif %}

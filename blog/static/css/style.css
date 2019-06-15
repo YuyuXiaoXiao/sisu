@@ -661,7 +661,8 @@ button:focus {
     left: 20px;
     right: 20px;
     bottom: 20px;
-    background: rgba(34, 34, 35, 0.8);
+    background: rgba(93, 16, 73, 0.4);
+    max-width:100%;
     color: #fff;
     transition: all 0.3s linear;
     display: flex;
@@ -669,11 +670,12 @@ button:focus {
     justify-content: center; }
     .categories_post .categories_details h5 {
       margin-bottom: 0px;
-      font-size: 18px;
+      font-size: 22px;
       line-height: 26px;
       text-transform: uppercase;
       color: #fff;
-      position: relative; }
+      position: relative;
+      }
     .categories_post .categories_details p {
       font-weight: 300;
       font-size: 14px;
@@ -685,7 +687,7 @@ button:focus {
       width: 100%;
       height: 1px; }
   .categories_post:hover .categories_details {
-    background: #1D556F; 
+    background: #5D1049; 
     opacity: 0.475;
     }
 

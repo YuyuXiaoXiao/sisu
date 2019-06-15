@@ -1268,3 +1268,8 @@ nav ul li ul li a {
   transform: rotate(-45deg);
 }
 
+/** Category **/
+.cat_img {
+     height: 25%;
+     width: 100%;
+}
