@@ -124,7 +124,7 @@ def popular_cases(request):
   random_cases = []
   limit = len(Post.objects.all())
   if limit > 2:
-    random_numbers = random.sample(range(1, limit), 3)
+    random_numbers = random.sample(range(1, limit), 2)
   elif limit > 1:
     random_numbers = [1, 2]
   elif limit > 0:
@@ -225,7 +225,6 @@ def story(request, category_name):
     mapping[Category.Politics] = "activities within an organization aimed at improving someone's status and are typically considered to be devious or divisive"
     mapping[Category.Conflict] = "a serious disagreement or argument between persons of similar age, status, or abilities"
     mapping[Category.Miscellaneous] = "many other issues can happen to an individual..."   
-      
     return render(request, 'blog/story.html', {'posts':posts, 'cat':cat, 'description': mapping[cat]})
     
 def get_all_category(request):

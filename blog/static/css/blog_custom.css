@@ -1217,6 +1217,51 @@ nav ul li ul li a {
   #carouselExampleControls{
       max-height:100%;
   }
+  
+  #banner {
+    width: 70%;
+    left: 5%;
+    padding: 5px;
+    }
+    
+  #banner h1 {
+      font-size:4.5rem;
+  } 
+  
+  #banner p {
+      font-size: 1.2rem;
+  }
+
+  #banner h3 {
+        font-size: 2rem;
+  } 
+  
+  #contact_left {
+      max-width: 100%;
+  }
+  
+  #contact_left > div {
+    width: 100%;
+    padding-left: 60px;
+
+  }
+  
+  #contact_left h1 {
+      font-size: 2.5rem;
+  }
+   
+  #contact_right {
+      max-width: 100%;
+      margin-left: 60px;
+  }
+  
+  #contact_left_img {
+      display:none;
+  }
+  
+  #overview_img{
+      display:none;
+  }
 }
 
 @media screen and (min-width: 999px) {

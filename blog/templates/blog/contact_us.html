@@ -13,7 +13,7 @@
     <section class="contact_area p_120">
         <div class="container contact-us-content">
             <div class="row contact-us-panel">
-                <div class="contact-us-left-panel">
+                <div id="contact_left" class="contact-us-left-panel">
                     <div>
                         <h1>
                             Partnership Inquiries? 
@@ -22,7 +22,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="contact-us-form contact-us-right-panel">
+                <div id="contact_right" class="contact-us-form contact-us-right-panel">
                     <form method="post" class="contact_form">
                     <table>
                     {% csrf_token %}
@@ -89,13 +89,13 @@
                 </div>
             </div>
             <div class="row contact-us-panel">
-                <div class="contact-us-left-panel">
+                <div id="contact_left_img" class="contact-us-left-panel">
                     <figure class="circle-img">
                         <img src="{% static 'img/story/contact_us.jpg' %}" />
                         <div class="img-blur"></div>
                     </figure>
                 </div>
-                <div class="right-text contact-us-right-panel contact-us-text-panel">
+                <div id="contact_right" class="right-text contact-us-right-panel contact-us-text-panel">
                     <h1>
                         Help SISU
                         shine!

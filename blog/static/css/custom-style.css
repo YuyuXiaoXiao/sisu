@@ -145,7 +145,7 @@ html {
 }
 
 .story-carousel-caption {
-    width: 45%;
+    width: 60%;
     left: 4%;
 }
 
@@ -167,7 +167,7 @@ html {
 .about-info {
     text-align: center;
     padding-top: 10px;
-    min-height: 200px;
+    min-height: 220px;
     margin: 0 auto;
 }
 .left-text {
