@@ -18,18 +18,14 @@ class Category(Enum):
   Harassment = 'Harassment'; 
   Discrimination = 'Discrimination'; 
   Politics = 'Politics';
-  Worklife = 'Worklife';
   Conflict = 'Conflict';
-  ConflictEM = 'ConflictEM' 
   Miscellaneous = 'Miscellaneous';
   
   class Labels:
     Discrimination = 'Discrimination'; 
-    Harassment = 'Sexual Harassment';
+    Harassment = 'Harassment';
     Politics = 'Politics';
-    Conflict = 'Conflict Between Peers';
-    ConflictEM = 'Employee-Manager Conflict'
-    Worklife = 'Worklife Imbalance';
+    Conflict = 'Employee Conflicts';
     Miscellaneous = 'Other issues';
     
   def get_label(cat_name):
@@ -44,18 +40,11 @@ class Category(Enum):
       
       if cat_name == "Conflict":
         return Category.Conflict
-        
-      if cat_name =="ConflictEM":
-        return Category.ConflictEM
-        
-      if cat_name == "Worklife":
-        return Category.Worklife
-      
+              
       if cat_name == "Miscellaneous":
         return Category.Miscellaneous
     
     
-  
 @python_2_unicode_compatible  
 class Post(models.Model, HitCountMixin):
   author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

@@ -30,6 +30,9 @@
         <li>
           <a href="#!">Stories</a>
           <ul class="nav-dropdown">
+            <li>
+              <a href="{% url 'get_all_category' %}">All Categories</a>
+            </li>
             {% for name, member in categories %}
             <li>
               <a href="{% url 'story' category_name=member.value %}">{{ member.label }}</a>
@@ -41,7 +44,7 @@
         <li>
           <a href="{% url 'contact_us' %}">Contact</a>
         </li>
-        <li id="separater_li" style="visibility:hidden">
+        <li id="separater_li" style="visibility:hidden;">
           <a>PH</a>
         </li>
 
@@ -57,17 +60,17 @@
         <li id="account_detail">
             {{ userprofile.management_form }}
             {% for form in userprofile.forms %}
-            <a href="#!" style="margin-top:-35px;margin-bottom:-30px;padding:0;"><img id="profile_img" src="{% static '/img/icon/' %}{{ form.instance.photo }}.png" style="transform: scale(0.35);">Hi, {{ request.user }}!</a>
+            <a href="#!" style="padding:0 5px;"><img id="profile_img" src="{% static '/img/icon/' %}{{ form.instance.photo }}.png" style="height:80%;margin-right:10px;">Hi, {{ request.user }}!</a>
             {% endfor %}
             
             <ul class="nav-dropdown">
-            <li>
-              <a href="{% url 'user_details' pk=user.pk %}">Account</a>
-            </li>
-            <li>
-              <a href="{% url 'logout' %}">Log Out</a>
-            </li>
-          </ul>
+                <li>
+                  <a href="{% url 'user_details' pk=user.pk %}">Account</a>
+                </li>
+                <li>
+                  <a href="{% url 'logout' %}">Log Out</a>
+                </li>
+            </ul>
         </li>
 
         {% else %}
@@ -86,8 +89,8 @@
     </nav>
   </div>
 </section>
-  
-<p id="placeholder" style="visibility:hidden"> placeholder</p>
+
+<p id="placeholder" style="visibility:hidden;">placeholder</p>
 
 <!-- Sign-in/up Modal -->
 <div class="modal fade" id="signinModal" role="dialog" style="overflow-y:hidden;">
@@ -104,10 +107,12 @@
         </div>
     </div>
 </div>
+
     {% block sub_content %}
         
     {% endblock %}
-    
+   
+  
 <script>
 (function($) { // Begin jQuery
   $(function() { // DOM ready

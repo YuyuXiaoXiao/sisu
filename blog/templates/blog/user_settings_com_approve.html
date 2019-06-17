@@ -21,8 +21,9 @@
     {% endfor %}
 </div>
 {% else %}
-    <h4>Leave a comment to inspire the others! </h4>  
+<div class="story-content">
+    <h3>You haven't commented yet. Leave one to inspire the others! </h3>  
     
     {% include 'blog/story_popular.html' %}
-
+</div>
 {% endif %}

@@ -1078,8 +1078,8 @@ label {
 
 .logo_h {
     transform: scale(0.35);
-    top: -42.5px;
-    left: -70px;
+    top: -40px;
+    left: -30px;
 }
 
 .picture {
@@ -1090,7 +1090,7 @@ label {
 
 .nav-container {
    max-width: 1465px;
-   margin: 0 auto;
+   margin: 0 5px;
 }
 
 nav {
@@ -1108,7 +1108,7 @@ nav ul li {
 nav ul li a,
 nav ul li a:visited {
   display: block;
-  padding: 0 20px;
+  padding: 3px 20px;
   line-height: 50px;
   background: white;
   color: #9d9d9d;
@@ -1150,10 +1150,15 @@ nav ul li ul li a {
   background: white;
 }
 
-@media only screen and (max-width: 798px) {
+@media only screen and (max-width: 998px) {
   .nav-mobile {
     display: block;
   }
+  
+  .logo_h {
+    top: -25px;
+    left: -85px;
+}
 
   nav {
     width: 100%;
@@ -1166,7 +1171,7 @@ nav ul li ul li a {
     float: none;
   }
   nav ul li a {
-    padding: 10px 50px;
+    padding: 10px 20px;
     line-height: 20px;
   }
   nav ul li ul li a {
@@ -1175,23 +1180,24 @@ nav ul li ul li a {
   
   #signup-button {
     padding: 12px 10px;
-    margin-left: 40px;
+    margin-left: 15px;
     margin-bottom: 5px;
   }
   
   #main_search_input {
     margin-top:10px;
-    margin-left: 28px;
-    margin-right: 10px;
-    width:90%;
+    margin-left: 3px;
+    margin-right: 16px;
+    width:100%;
   }
   
   .nav-dropdown {
     position: static;
+    box-shadow: none;
   }
   
   #placeholder {
-      margin: -30px;
+      margin:-30px;
   }
   
   #separater_li{
@@ -1203,26 +1209,75 @@ nav ul li ul li a {
   }
   
   #account_detail{
-      margin-left: 45px;
-      margin-top: 50px;
-      margin-bottom: 35px;
+      margin-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+  }
+  
+  #carouselExampleControls{
+      max-height:100%;
+  }
+  
+  #banner {
+    width: 70%;
+    left: 5%;
+    padding: 5px;
+    }
+    
+  #banner h1 {
+      font-size:4.5rem;
+  } 
+  
+  #banner p {
+      font-size: 1.2rem;
   }
 
+  #banner h3 {
+        font-size: 2rem;
+  } 
+  
+  #contact_left {
+      max-width: 100%;
+  }
+  
+  #contact_left > div {
+    width: 100%;
+    padding-left: 60px;
+
+  }
+  
+  #contact_left h1 {
+      font-size: 2.5rem;
+  }
+   
+  #contact_right {
+      max-width: 100%;
+      margin-left: 60px;
+  }
+  
+  #contact_left_img {
+      display:none;
+  }
+  
+  #overview_img{
+      display:none;
+  }
 }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 999px) {
   .nav-list {
     display: block !important;
   }
   
-    #placeholder {
+  #placeholder {
       margin: -5px;
+      font-size:0.1rem;
   }
 }
 #nav-toggle {
   position: absolute;
   left: 18px;
-  top: 18px;
+  top: 35px;
   cursor: pointer;
   padding: 10px 35px 16px 0px;
 }
@@ -1258,3 +1313,17 @@ nav ul li ul li a {
   transform: rotate(-45deg);
 }
 
+/** Category **/
+.cat_img {
+     height: 25%;
+     width: 100%;
+}
+
+/* view */
+.view_icon {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    cursor: context-menu;
+    /* Other styles here */
+}

@@ -42,7 +42,7 @@
         <li>
           <a href="{% url 'contact_us' %}">Contact</a>
         </li>
-        <li id="separater_li" style="visibility:hidden">
+        <li id="separater_li" style="visibility:hidden;">
           <a>PH</a>
         </li>
 
@@ -56,19 +56,15 @@
          
         {% if isLoggedIn == True %}
         <li id="account_detail">
-            {{ userprofile.management_form }}
-            {% for form in userprofile.forms %}
-            <a href="#!" style="margin-top:-35px;margin-bottom:-30px;padding:0;"><img id="profile_img" src="{% static '/img/icon/' %}{{ form.instance.photo }}.png" style="transform: scale(0.35);">Hi, {{ request.user }}!</a>
-            {% endfor %}
-            
+            <a href="#!" style="padding:0 5px;">Hi, {{ request.user }}!</a>
             <ul class="nav-dropdown">
-            <li>
-              <a href="{% url 'user_details' pk=user.pk %}">Account</a>
-            </li>
-            <li>
-              <a href="{% url 'logout' %}">Log Out</a>
-            </li>
-          </ul>
+                <li>
+                  <a href="{% url 'user_details' pk=user.pk %}">Account</a>
+                </li>
+                <li>
+                  <a href="{% url 'logout' %}">Log Out</a>
+                </li>
+            </ul>
         </li>
 
         {% else %}

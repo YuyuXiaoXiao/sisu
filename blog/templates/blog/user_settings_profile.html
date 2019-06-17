@@ -36,7 +36,7 @@
                   SAVE
             </button> 
         </div>
-        <div id="results" style="display:none"><p>Updated Successfully. Go Back to see results!</p></div>
+        <div id="results" style="display:none"><p>Updated Successfully. Loading... </p></div>
     
      </div>
 </div>     
@@ -63,38 +63,23 @@
                  {'selectedIconWidth':150,
                   'selectedIconHeight':150,
                   'selectedBoxPadding':5,
-                  'iconsWidth':60,
-                  'iconsHeight':60,
-                  'boxIconSpace':5,
-                  'vectoralIconNumber':8,
-                  'horizontalIconNumber':3});
+                  'iconsWidth':65,
+                  'iconsHeight':65,
+                  'boxIconSpace':10,
+                  'vectoralIconNumber':5,
+                  'horizontalIconNumber': 2});
 
     var icons = [];
     icons.push({'iconFilePath':profile, 'iconValue':profiletag});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_1.png' %}", 'iconValue':'female_user_1'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_2.png' %}", 'iconValue':'female_user_2'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_3.png' %}", 'iconValue':'female_user_3'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_4.png' %}", 'iconValue':'female_user_4'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_5.png' %}", 'iconValue':'female_user_5'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_6.png' %}", 'iconValue':'female_user_6'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_7.png' %}", 'iconValue':'female_user_7'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_8.png' %}", 'iconValue':'female_user_8'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_9.png' %}", 'iconValue':'female_user_9'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_10.png' %}", 'iconValue':'female_user_10'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_11.png' %}", 'iconValue':'female_user_11'});
-    icons.push({'iconFilePath':"{% static 'img/icon/female_user_12.png' %}", 'iconValue':'female_user_12'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_1.png' %}", 'iconValue':'male_user_1'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_2.png' %}", 'iconValue':'male_user_2'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_3.png' %}", 'iconValue':'male_user_3'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_4.png' %}", 'iconValue':'male_user_4'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_5.png' %}", 'iconValue':'male_user_5'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_6.png' %}", 'iconValue':'male_user_6'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_7.png' %}", 'iconValue':'male_user_7'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_8.png' %}", 'iconValue':'male_user_8'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_9.png' %}", 'iconValue':'male_user_9'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_10.png' %}", 'iconValue':'male_user_10'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_11.png' %}", 'iconValue':'male_user_11'});
-    icons.push({'iconFilePath':"{% static 'img/icon/male_user_12.png' %}", 'iconValue':'male_user_12'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_f1.png' %}", 'iconValue':'avatar_f1'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_f2.png' %}", 'iconValue':'avatar_f2'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_f3.png' %}", 'iconValue':'avatar_f3'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_m1.png' %}", 'iconValue':'avatar_m1'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_m2.png' %}", 'iconValue':'avatar_m2'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_m3.png' %}", 'iconValue':'avatar_m3'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_n1.png' %}", 'iconValue':'avatar_n1'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_n2.png' %}", 'iconValue':'avatar_n2'});
+    icons.push({'iconFilePath':"{% static 'img/icon/avatar_n3.png' %}", 'iconValue':'avatar_n3'});
     
     iconSelect.refresh(icons);
     
@@ -118,6 +103,7 @@
           success: function( data ) 
           {
             $("#results").show();
+            window.setTimeout(function(){window.location.reload()}, 500);
           }
        })
 });  

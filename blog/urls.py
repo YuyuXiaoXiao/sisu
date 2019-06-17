@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^settings/user_id(?P<pk>\d+)/$', IndexView.as_view(), name='user_details'),
     url(r'^terms_conditions/$', views.terms_conditions, name='t_c'),
     url(r'^privacy_policy/$', views.privacy_policy, name='p_p'),
+    url(r'^sisu_case/category/$', views.get_all_category, name='get_all_category')
     
 ]

@@ -21,8 +21,9 @@
     {% endfor %}
 </div>
 {% else %}
-    <h4>Leave a comment to inspire the others! </h4>  
-    
-    {% include 'blog/story_popular.html' %}
+<div class="story-content">
+    <h3>You have 0 pending comment.</h3> 
+    <h3>Leave another comment <a href="{% url 'get_all_category' %}"><u>here</u></a>! </h3>  
 
+</div> 
 {% endif %}
