@@ -1318,3 +1318,12 @@ nav ul li ul li a {
      height: 25%;
      width: 100%;
 }
+
+/* view */
+.view_icon {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    cursor: context-menu;
+    /* Other styles here */
+}
