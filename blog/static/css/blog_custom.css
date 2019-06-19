@@ -61,6 +61,10 @@ ul.sq li::before {
 .hidden-hr {
     visibility: hidden;
 }
+
+  #comment-reply-div {
+      width: 100%;
+  }
 /*---- Comments Bottom Bar ---- */
 #bottombar {
 	height:25px;
@@ -1160,6 +1164,10 @@ nav ul li ul li a {
     left: -85px;
 }
 
+#cat_imgs {
+     height: 200px;
+}
+
   nav {
     width: 100%;
     padding: 70px 0 15px;
@@ -1225,7 +1233,7 @@ nav ul li ul li a {
     }
     
   #banner h1 {
-      font-size:4.5rem;
+      font-size:4rem;
   } 
   
   #banner p {
@@ -1233,7 +1241,7 @@ nav ul li ul li a {
   }
 
   #banner h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
   } 
   
   #contact_left {
@@ -1261,6 +1269,39 @@ nav ul li ul li a {
   
   #overview_img{
       display:none;
+  }
+  
+  #story-list {
+      width:100%;
+  }
+  
+  #cat-list {
+      margin-left: 20px;
+  }
+  
+  #story-footers{
+      width:100%;
+  }
+  .story-entry-footer-item{
+      position: relative;
+      margin: auto; 
+  }
+  
+  #story-social-panel-container {
+      margin: 55px 50px;
+  }
+  
+  #center-block-container {
+      flex-flow: row wrap;
+  }
+  
+  #center-block {
+      margin-left: 65px;
+  }
+  
+  #story-right-section {
+      position: relative;
+      margin: auto;
   }
 }
 

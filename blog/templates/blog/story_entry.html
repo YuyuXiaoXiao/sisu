@@ -18,8 +18,8 @@
 <section class="story-entry">
     {% include 'blog/story_entry_social.html' %} 
     
-    <div class="story-entry-content custom-row">
-        <div class="story-entry-center">
+    <div class="story-entry-content custom-row" id="center-block-container">
+        <div class="story-entry-center" id="center-block">
             <section>
                 <p>
                    {{ post.text|linebreaksbr }}
@@ -28,14 +28,17 @@
             
             {% include 'blog/story_entry_comment.html' %} 
             
+            <hr style="visibility:hidden"></hr>
+            
+            {% include 'blog/story_entry_solution.html' %} 
+            
         </div>
         <div class="story-entry-center-filler"></div>
+        
+        
     </div>
-    <div class="story-entry-comment">
-
-    </div>
-    {% include 'blog/story_entry_solution.html' %}
 </section>
+
 
 {% include 'blog/story_entry_footer.html' %}
 

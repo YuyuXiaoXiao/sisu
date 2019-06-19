@@ -24,7 +24,7 @@
       <div class="col-lg-4">
         <div class="categories_post">
             <a href="{% url 'story' category_name=member.value %}">
-                <img class="cat_img" src="{% static '/img/blog/cat-post/'|add:member.value|add:'.jpg' %}">
+                <img class="cat_img" id="cat_imgs" src="{% static '/img/blog/cat-post/'|add:member.value|add:'.jpg' %}">
             </a>
             <a href="{% url 'story' category_name=member.value %}">
             <div class="categories_details">
@@ -41,7 +41,7 @@
       <div class="col-lg-4">
         <div class="categories_post">
             <a href="{% url 'contact_us' %}">
-            <img class="cat_img" src="{% static '/img/story/contact_us.jpg' %}">
+            <img class="cat_img" id="cat_imgs" src="{% static '/img/story/contact_us.jpg' %}">
             </a>
             <a href="{% url 'contact_us' %}">
             <div class="categories_details">
