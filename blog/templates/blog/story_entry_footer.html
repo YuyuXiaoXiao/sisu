@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <section class="story-entry-footer custom-row">
 {% if default_cases %} 
-<div class="custom-row">
+<div class="custom-row" id="story-footers">
     {% for post in default_cases %}  
     <a href="{% url 'story_entry' pk=post.pk %}">
         <div class="story-entry-footer-item">
@@ -19,7 +19,7 @@
 </div>        
 {% else %}
 {% if rec_post_list %}
-    <div class="custom-row">
+    <div class="custom-row" id="story-footers">
         {% for post in rec_post_list %}  
         <a href="{% url 'story_entry' pk=post.pk %}">
             <div class="story-entry-footer-item">
@@ -36,7 +36,7 @@
         {% endfor %}
     </div>        
 {% else %} 
-    <div class="custom-row">
+    <div class="custom-row" id="story-footers">
     {% for post in pop_cases %}
         {% for p in post %}
         <a href="{% url 'story_entry' pk=p.pk %}">

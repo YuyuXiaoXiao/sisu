@@ -4,8 +4,8 @@
     <!-- story entry insert story id -->
     {% for post in posts %}
     <a href="{% url 'story_entry' pk=post.pk %}">
-        <div class="story-content-entry custom-row">
-            <div class="story-text">
+        <div id="cat-list" class="story-content-entry custom-row">
+            <div class="story-text" id="story-list">
                 <h4>
                     {{ post.title }}
                 </h4>
@@ -26,4 +26,5 @@
     {% include 'blog/story_popular.html' %}
     
     {% endfor %}
+    <hr style="visibility:hidden;"></hr>
 </div>
