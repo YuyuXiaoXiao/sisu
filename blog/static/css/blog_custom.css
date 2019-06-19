@@ -1289,6 +1289,7 @@ nav ul li ul li a {
   
   #story-social-panel-container {
       margin: 55px 50px;
+      z-index:200;
   }
   
   #center-block-container {
@@ -1302,6 +1303,18 @@ nav ul li ul li a {
   #story-right-section {
       position: relative;
       margin: auto;
+  }
+  
+  #case-header h4{
+      font-size: 1.2rem;
+  }
+  
+  #case-header h1{
+      font-size: 2.2rem;
+  }
+  
+  #case-header p{
+      font-size: 0.8rem;
   }
 }
 
