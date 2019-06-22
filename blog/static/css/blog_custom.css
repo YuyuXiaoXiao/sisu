@@ -1381,3 +1381,11 @@ nav ul li ul li a {
     cursor: context-menu;
     /* Other styles here */
 }
+
+.case_icon {
+  background: url(../img/icon/eye1.JPG);
+  height: 16px;
+  width: 16px;
+  display: block;
+  /* Other styles here */
+}

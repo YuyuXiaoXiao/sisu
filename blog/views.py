@@ -220,11 +220,11 @@ def story(request, category_name):
     mapping = {}
   
     # Bad hard codes...
-    mapping[Category.Harassment] = "the unjust or prejudicial treatment of different categories of people or things, especially on the grounds of race, age, sex, or intellectual capability"
-    mapping[Category.Discrimination] = "harassment (typically of a woman) in a workplace, or other professional or social situation, involving the making of unwanted sexual advances or obscene remarks"
-    mapping[Category.Politics] = "activities within an organization aimed at improving someone's status and are typically considered to be devious or divisive"
-    mapping[Category.Conflict] = "a serious disagreement or argument between persons of similar age, status, or abilities"
-    mapping[Category.Miscellaneous] = "many other issues can happen to an individual..."   
+    mapping[Category.Harassment] = "An unpleasant or hostile situation created by uninvited and unwelcome verbal or physical conduct"
+    mapping[Category.Discrimination] = "The unjust or prejudicial treatment of different categories of persons, especially on the grounds of race, age, or sex"
+    mapping[Category.Politics] = "Devious or divisive activity aimed at improving the status of one or more persons in an organization"
+    mapping[Category.Conflict] = "A serious disagreement or argument between persons of similar age, status, or abilities"
+    mapping[Category.Miscellaneous] = "Additional cases which do not fall under a particular category"   
     return render(request, 'blog/story.html', {'posts':posts, 'cat':cat, 'description': mapping[cat]})
     
 def get_all_category(request):
