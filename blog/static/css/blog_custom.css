@@ -1389,3 +1389,21 @@ nav ul li ul li a {
   display: block;
   /* Other styles here */
 }
+
+/* Resource */
+.res_btn{
+  width:100%;
+  position:relative;
+  height:40px;
+}
+
+.res_btn_icon{
+  position:absolute;
+  left:5px;
+  top:10px;
+  font-size:10px;
+}
+
+.res_wrapper{
+  padding:0;
+}

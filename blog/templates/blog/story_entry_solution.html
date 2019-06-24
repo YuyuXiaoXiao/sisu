@@ -11,10 +11,15 @@
     </div>
     <div class="story-entry-right-content">
         <h4>RESOURCES</h4>
-        <a class="sisu-button" href="#" target="_blank"><i class="fa fa-home"></i> Resource Name 1</a>
-        <hr/>
-        <a class="sisu-button" href="#" target="_blank"><i class="fa fa-home"></i> Resource Name 2 </a>
-        <hr/>
-        <a class="sisu-button" href="#" target="_blank"><i class="fa fa-home"></i> Resource Name 3</a>
+        
+        {% for resource in resources %}
+        <div>
+            <a href="{{ resource.res_url }}" target="_blank"><i class="fa fa-home"></i> {{ resource.title }} </a>
+            <hr/>
+        </div>   
+        {% empty %}
+            <p>More resources are coming!</p>
+        {% endfor %}
+        
     </div>
 </div>

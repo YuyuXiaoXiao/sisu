@@ -6,7 +6,7 @@ from sendgrid.helpers.mail import *
 
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post, Comment, Category, PostPreferrence, ReplyToComment,Cluster
+from .models import Post, Comment, Category, PostPreferrence, ReplyToComment,Cluster, Resource
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm, ContactForm, SearchForm, ReplyToCommentForm
 from django.shortcuts import redirect
@@ -240,6 +240,23 @@ def story_entry(request, pk):
     
     #print ("hit---- " + str(hit_count_response.hit_message))
     
+    # Get resources
+    random_num = []
+    random_res = []
+    res = Resource.objects.filter(category_name=post.category_name)
+    random_num = list(map(lambda x: x.pk, res))
+    
+    limit = len(res)
+    
+    if limit > 2:
+        random.shuffle(random_num)
+        random_num = random_num[:3]
+        
+    if(random_num): 
+        random_res = Resource.objects.filter(pk__in=random_num)
+        
+    #print(random_num)
+    
     if request.user.is_authenticated:
         if PostPreferrence.objects.filter(username=user_name, ip_address=ip, postpk=pk, vote_value=1).exists():   
             voted = True
@@ -266,7 +283,8 @@ def story_entry(request, pk):
     return render(request, 'blog/story_entry.html', 
                   {'post': post, 
                    'summary': summary,
-                  })
+                   'resources': random_res,
+                  })    
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
