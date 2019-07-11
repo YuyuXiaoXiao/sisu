@@ -6,7 +6,7 @@ from sendgrid.helpers.mail import *
 
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post, Comment, Category, PostPreferrence, ReplyToComment,Cluster
+from .models import Post, Comment, Category, PostPreferrence, ReplyToComment,Cluster, Resource
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm, ContactForm, SearchForm, ReplyToCommentForm
 from django.shortcuts import redirect
@@ -220,11 +220,11 @@ def story(request, category_name):
     mapping = {}
   
     # Bad hard codes...
-    mapping[Category.Harassment] = "the unjust or prejudicial treatment of different categories of people or things, especially on the grounds of race, age, sex, or intellectual capability"
-    mapping[Category.Discrimination] = "harassment (typically of a woman) in a workplace, or other professional or social situation, involving the making of unwanted sexual advances or obscene remarks"
-    mapping[Category.Politics] = "activities within an organization aimed at improving someone's status and are typically considered to be devious or divisive"
-    mapping[Category.Conflict] = "a serious disagreement or argument between persons of similar age, status, or abilities"
-    mapping[Category.Miscellaneous] = "many other issues can happen to an individual..."   
+    mapping[Category.Harassment] = "An unpleasant or hostile situation created by uninvited and unwelcome verbal or physical conduct"
+    mapping[Category.Discrimination] = "The unjust or prejudicial treatment of different categories of persons, especially on the grounds of race, age, or sex"
+    mapping[Category.Politics] = "Devious or divisive activity aimed at improving the status of one or more persons in an organization"
+    mapping[Category.Conflict] = "A serious disagreement or argument between persons of similar age, status, or abilities"
+    mapping[Category.Miscellaneous] = "Additional cases which do not fall under a particular category"   
     return render(request, 'blog/story.html', {'posts':posts, 'cat':cat, 'description': mapping[cat]})
     
 def get_all_category(request):
@@ -239,6 +239,23 @@ def story_entry(request, pk):
     hit_count_response = HitCountMixin.hit_count(request, hit_count)    
     
     #print ("hit---- " + str(hit_count_response.hit_message))
+    
+    # Get resources
+    random_num = []
+    random_res = []
+    res = Resource.objects.filter(category_name=post.category_name)
+    random_num = list(map(lambda x: x.pk, res))
+    
+    limit = len(res)
+    
+    if limit > 2:
+        random.shuffle(random_num)
+        random_num = random_num[:3]
+        
+    if(random_num): 
+        random_res = Resource.objects.filter(pk__in=random_num)
+        
+    #print(random_num)
     
     if request.user.is_authenticated:
         if PostPreferrence.objects.filter(username=user_name, ip_address=ip, postpk=pk, vote_value=1).exists():   
@@ -266,7 +283,8 @@ def story_entry(request, pk):
     return render(request, 'blog/story_entry.html', 
                   {'post': post, 
                    'summary': summary,
-                  })
+                   'resources': random_res,
+                  })    
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')

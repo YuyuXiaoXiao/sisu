@@ -26,7 +26,7 @@ class Category(Enum):
     Harassment = 'Harassment';
     Politics = 'Politics';
     Conflict = 'Employee Conflicts';
-    Miscellaneous = 'Other issues';
+    Miscellaneous = 'Other Issues';
     
   def get_label(cat_name):
       if cat_name == "Harassment":
@@ -126,3 +126,11 @@ class Cluster(models.Model):
   
   def get_members(self):
         return "\n".join([u.username for u in self.users.all()])
+ 
+class Resource(models.Model):
+  title = models.CharField(max_length=200)
+  category_name = EnumField(Category, max_length=30, default=Category.Harassment)
+  res_url = models.URLField(max_length=250)      
+  
+  def __str__(self):
+    return self.title
